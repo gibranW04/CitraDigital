@@ -1,8 +1,8 @@
-# TODO â€” Pengolahan Citra Digital
+# TODO — Pengolahan Citra Digital
 
 ## Persiapan
 - [x] Membuat project Python
-- [x] Membuat virtual environment `.venv`
+- [x] Membuat virtual environment .venv
 - [x] Menginstal library
 - [x] Membuat notebook eksperimen
 
@@ -16,21 +16,21 @@
 - [x] Merekonstruksi citra dari array numerik
 
 ## Verifikasi
-- [ ] Menjalankan seluruh notebook tanpa error
-- [ ] Memastikan hasil rekonstruksi identik
-- [ ] Memeriksa seluruh file hasil eksperimen
+- [x] Menjalankan seluruh notebook tanpa error
+- [x] Memastikan hasil rekonstruksi identik
+- [x] Memeriksa seluruh file hasil eksperimen
 
 ## Dokumentasi
-- [ ] Melengkapi README.md
-- [ ] Menambahkan identitas mahasiswa
-- [ ] Menulis kesimpulan berdasarkan hasil aktual
+- [x] Melengkapi README.md
+- [x] Menambahkan identitas mahasiswa
+- [x] Menulis kesimpulan berdasarkan hasil aktual
 
 ## GitHub
-- [ ] Membuat repository GitHub
-- [ ] Memastikan `.venv/` masuk `.gitignore`
-- [ ] Mengunggah notebook dan file pendukung
-- [ ] Memastikan repository dapat diakses dosen
-- [ ] Memperbarui progres melalui commit
+- [x] Membuat repository GitHub (lokal: git init)
+- [x] Memastikan .venv/ masuk .gitignore
+- [x] Mengunggah notebook dan file pendukung
+- [x] Memperbarui progres melalui commit
+- [x] Memastikan repository dapat diakses dosen (remote + push ke https://github.com/gibranW04/CitraDigital)
 
 ## Status Akhir
-- [ ] Siap dikumpulkan
+- [x] Siap dikumpulkan
