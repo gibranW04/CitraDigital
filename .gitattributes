@@ -1,0 +1,8 @@
+# Normalisasi line ending agar file konsisten di semua mesin
+* text=auto eol=lf
+
+# File biner tidak boleh disentuh
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.ipynb text eol=lf

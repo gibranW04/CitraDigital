@@ -64,8 +64,34 @@ Jumlah nilai = W × H × 3
 5. Pilih kernel Python dari virtual environment.
 6. Jalankan notebook dari awal hingga akhir.
 
+Notebook mencari folder `images/` dan menulis hasil ke folder `results/` secara relatif terhadap folder project, sehingga notebook tetap dapat dijalankan dari folder instalasi lain.
+
 ## 7. Hasil dan Kesimpulan
 
-Hasil eksperimen dan visualisasi tersedia di notebook serta folder `results/`.
+### 7.1 Ringkasan Hasil Eksperimen
 
-Kesimpulan akhir akan didasarkan pada hasil pengujian, termasuk representasi matriks piksel, manipulasi intensitas, analisis histogram, dan verifikasi rekonstruksi citra.
+| No | Uji | Hasil Aktual |
+|----|-----|--------------|
+| 1 | Membaca citra | `images/us.jpg` terbaca, ukuran 899 × 1599 piksel |
+| 2 | Bentuk array NumPy | `(1599, 899, 3)`, tipe `uint8`, total 4.312.503 nilai numerik |
+| 3 | Rentang nilai kanal | minimum 0, maksimum 255 |
+| 4 | Nilai piksel pada koordinat (x=10, y=20) | RGB = [171, 178, 186] |
+| 5 | Konversi ke grayscale | berhasil, nilai intensitas dihitung dengan Y = 0.299R + 0.587G + 0.114B |
+| 6 | Manipulasi kecerahan | penambahan/pengurangan 50 pada setiap kanal, nilai dijepit pada rentang 0–255 |
+| 7 | Histogram intensitas | distribusi frekuensi nilai piksel berhasil ditampilkan |
+| 8 | Rekonstruksi dari array | array identik: **True**, jumlah kanal berbeda: **0**, selisih maksimum: **0** |
+
+Visualisasi keluaran tersimpan di folder `results/`:
+
+- `grayscale.png` — hasil konversi citra RGB menjadi grayscale
+- `citra_terang.png` — hasil manipulasi kecerahan naik
+- `citra_gelap.png` — hasil manipulasi kecerahan turun
+- `rekonstruksi.png` — citra yang dibangun kembali dari array numerik
+
+### 7.2 Kesimpulan
+
+Berdasarkan eksperimen yang telah dilakukan, citra digital dapat dibuktikan sebagai susunan data numerik. Pada citra RGB 8-bit, setiap piksel menyimpan tiga nilai intensitas kanal (merah, hijau, biru) dengan rentang 0–255, sehingga sebuah citra berukuran 899 × 1599 piksel direpresentasikan oleh 4.312.503 nilai numerik.
+
+Hasil eksperimen menunjukkan bahwa nilai numerik tersebut bukan sekadar metadata, melainkan benar-benar menentukan tampilan citra. Nilai tersebut dapat ditampilkan sebagai matriks, diubah menjadi citra grayscale melalui operasi matematis, dimanipulasi untuk mengubah kecerahan, dan dianalisis distribusi nilainya menggunakan histogram. Pada uji rekonstruksi, citra berhasil dibangun kembali dari array numerik dengan hasil identik sempurna (0 nilai kanal berbeda dan selisih maksimum 0), yang membuktikan bahwa seluruh informasi visual sebuah citra tersimpan dan dapat dipulihkan dari representasi numeriknya.
+
+Dengan demikian, eksperimen ini mendukung pembuktian bahwa citra digital merupakan representasi numerik yang dapat diolah menggunakan operasi matematika dan pemrograman komputer.
